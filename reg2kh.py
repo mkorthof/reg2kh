@@ -111,13 +111,12 @@ def convert_key(data, type):
 	# add the bytes from the modulus
 	for m in modulus:
 		buffer.append(m)
-		
+
 	out = ""
 	for b in buffer:
 		out = out + chr(b)
 	
 	# return the out buffer as base 64
-	#return b64encode(out)
 	return b64encode(out.encode('iso-8859-1')).decode('ascii'), out
 
 def fp(out, hash):
@@ -126,7 +125,7 @@ def fp(out, hash):
 	return '(' + hash.upper() + ') ' + ':'.join(a+b for a,b in zip(fp_plain[::2], fp_plain[1::2]))
     
 def usage():
-	print ("reg2kh --putty --winscp [--noresolve] [--fp-md5 [--fp-sha256]")
+	print ("reg2kh --putty --winscp [--noresolve] [--fp-md5|sha256]")
 	print ("Exports SSH host keys from PuTTY or WinSCP to known_hosts format.")
 	print ("    --putty          Export keys from PuTTY")
 	print ("    --winscp         Export keys from WinSCP")

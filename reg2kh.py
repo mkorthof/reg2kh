@@ -131,7 +131,7 @@ def usage():
 	print ("    --winscp         Export keys from WinSCP")
 	print ("    --noresolve      Don't resolve hosts to IP addresses")
 	print ("    --fp-md5         Display md5 key fingerprint")
-	print ("    --fp-sha256			 Display sha256 key fingerprint")
+	print ("    --fp-sha256      Display sha256 key fingerprint")
 	print ("")
 	print ("    --showerrors     Show error messages")
 	print ("    --showdebug      Show debug messages")
